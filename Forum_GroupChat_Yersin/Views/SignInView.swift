@@ -1,11 +1,5 @@
-//
-//  SignInView.swift
-//  App_GroupChat_IOS_Yersin
-//
-//  Created by Tran Phuc Huynh on 27/11/24.
-//
-
 import SwiftUI
+import AVKit
 
 // Khai báo extension cho Color để sử dụng mã màu hex
 extension Color {
@@ -22,6 +16,8 @@ extension Color {
         self.init(red: red, green: green, blue: blue)
     }
 }
+
+
 
 struct SignInView: View {
     @Binding var showSignIn: Bool
@@ -92,11 +88,13 @@ struct SignInView: View {
                 .frame(width: 300)
             }
             Spacer()
+            .navigationBarHidden(true)
         }
         .edgesIgnoringSafeArea(.top)
         }
 }
 
-    #Preview {
-        SignInView(showSignIn: .constant(true))
-    }
+#Preview {
+    SignInView(showSignIn: .constant(true))
+}
+

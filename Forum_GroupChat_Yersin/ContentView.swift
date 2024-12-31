@@ -153,9 +153,8 @@ struct ContentView: View {
     @State private var showSideMenu: Bool = false
     @State private var selectedPage: MenuPage = .generalChat
     
-   // init(showSignIn: Bool = true) {
-      //  self.showSignIn = AuthManager.shared.getCurrentUser() == nil
-        
+  //  init(showSignIn: Bool = true) {
+ //      self.showSignIn = AuthManager.shared.getCurrentUser() == nil
  //  }
 
     var body: some View {
@@ -222,5 +221,5 @@ struct ContentView: View {
 
 
 #Preview {
-        ContentView()
+    ContentView()
 }

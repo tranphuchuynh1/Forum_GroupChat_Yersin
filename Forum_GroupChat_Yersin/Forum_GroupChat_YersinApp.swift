@@ -25,14 +25,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 // ham` chinh' run programming
-@available(iOS 16.0, *)
 @main
 struct Forum_GroupChat_Yersin: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SettingView()
         }
     }
 }

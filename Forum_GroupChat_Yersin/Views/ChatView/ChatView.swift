@@ -17,7 +17,7 @@ struct ChatView: View {
         VStack {
             ScrollViewReader { scrollView in
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing:8){
+                    VStack(spacing:10){
                         ForEach(Array(chatViewModel.messages.enumerated()), id: \.element ) { idx, message in
                             MessageView(message: message)
                                 .id(idx)
@@ -28,8 +28,9 @@ struct ChatView: View {
                     }
                 }
             }
+            // css doan chat
             HStack {
-                TextField("Nhap tin nhan.......", text: $text,axis: .vertical)
+                TextField("Nhập tin nhắn.......", text: $text,axis: .vertical)
                     .padding()
             ZStack {
                 Button {
@@ -38,17 +39,17 @@ struct ChatView: View {
                             if success {
                                 
                             } else {
-                                print("loi~ khi gui tin nhan")
+                                print("lỗi khi gửi tin nhắn, vui lòng thử lại!")
                             }
                         }
                         text = ""
                     }
                 } label: {
                     // css for button send o day nhe
-                    Text("Send")
+                    Text("Gửi")
                         .padding()
-                        .foregroundColor(Color.init(uiColor: .systemBackground)) // color text button
-                        .background(.cyan)
+                        .background(Color(red: 0.53, green: 0.13, blue: 0.11))
+                        .foregroundColor(.white) // color text button
                         .cornerRadius(50)
                         .padding(.trailing)
                     }
@@ -64,9 +65,8 @@ struct ChatView: View {
 
 
 #Preview {
-    if #available(iOS 16.0, *) {
         ChatView()
-    } else {
-        // Fallback on earlier versions
-    }
 }
+
+
+

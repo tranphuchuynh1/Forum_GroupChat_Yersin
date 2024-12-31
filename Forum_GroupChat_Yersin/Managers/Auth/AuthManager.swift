@@ -67,7 +67,7 @@ final class AuthManager: NSObject {
     }
     
     func signInWithGoogle(completion: @escaping (Result<ChatRoomUser, GoogleSignInError>) -> Void) {
-        let clientID = "263958302226-k2pnqn5peb5l718218qh48j7glpisa1l.apps.googleusercontent.com"
+        let clientID = "776638714975-55qspn7pg89ict916nv3dg0afmj8m6e0.apps.googleusercontent.com"
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
         
